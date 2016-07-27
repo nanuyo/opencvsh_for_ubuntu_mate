@@ -13,7 +13,7 @@ Step 3. Insert micro-SD Card to your host PC
 
 Step 4. Copy img to SDCARD
 
-replace sdX to your SDCARD device name in your host - Be carefull!!
+replace sdX to your SDCARD device name in your host
 
 sudo dd if=ubuntu-16.04-mate-odroid-xu3-20160708.img of=/dev/sdX bs=1M conv=fsync
 	sync
