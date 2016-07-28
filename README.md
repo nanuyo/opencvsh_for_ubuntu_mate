@@ -12,7 +12,7 @@ http://odroid.in/ubuntu_16.04lts/
 
 Step 2. un xz on your host with this command
 
-unxz ubuntu-16.04-mate-odroid-xu3-20160708.img.xz
+$unxz ubuntu-16.04-mate-odroid-xu3-20160708.img.xz
 
 Step 3. Insert micro-SD Card to your host PC
             Be sure that your SD is more than 8GByte
@@ -23,17 +23,20 @@ Step 4. Copy img to SDCARD
 Replace sdX to your SDCARD device name in your host.
 ==> !! BE CAREFUL -> IF YOU PUT THE NAME OF YOUR LOCAL HDD INSTEAD OF SDCARD, YOU LOST ALL YOUR DATA IN HDD.
 
-sudo dd if=ubuntu-16.04-mate-odroid-xu3-20160708.img of=/dev/sdX bs=1M conv=fsync
-	sync
+$sudo dd if=ubuntu-16.04-mate-odroid-xu3-20160708.img of=/dev/sdX bs=1M conv=fsync
+$sync
 
 Step 6. Install Gparted on your host and run
 (you need to resize rootfs partition as it is just 4GByte in the image)
 
-sudo apt-get install gparted
-sudo gparted
+$sudo apt-get install gparted
+
+$sudo gparted
 
 Step 7. select /dev/sdX on Gparted
+
 and on the rootfs. click right button on mouse and select resize.
+
 and set max size of sdcard.
 
  
@@ -51,11 +54,14 @@ Step 9: and download opencv_install_to_ubuntu_mate_16.04.sh
 (Or, copy this script file from your host)
 
 Step 10. run script
-source opencv_install_to_ubuntu_mate_16.04.sh
+
+$source opencv_install_to_ubuntu_mate_16.04.sh
+
 
 Step 11. Test facedetect sample
 
 cd opcv-2.13.xx/samples/c
+
 ./facedetect lena.jpg
 
 
